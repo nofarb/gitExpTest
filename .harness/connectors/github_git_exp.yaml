@@ -1,0 +1,22 @@
+connector:
+  name: github git exp
+  identifier: github_git_exp
+  description:
+  orgIdentifier: default
+  projectIdentifier: march9github
+  type: Github
+  spec:
+    url: https://github.com/nofarb/gitExpTest
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: nofarb
+          tokenRef: nofar_github_admin
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: nofar_github_admin
+    executeOnDelegate: false
+    type: Repo
